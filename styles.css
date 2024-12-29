@@ -1,0 +1,146 @@
+/* General page styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #FFD1DC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Card styling */
+#card {
+  background-color: #FF61A6;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Puppy image container styling */
+#puppy-container {
+  position: relative;
+  margin-top: 20px; /* Add space between text and puppy */
+  text-align: center; /* Center the image */
+}
+
+/* Puppy image styling */
+#puppy-img {
+  width: 180px;
+  height: auto;
+  border-radius: 10px;
+  animation: rotatePuppy 10s infinite linear; /* Rotating the image */
+}
+
+/* Button styling */
+button {
+  background-color: #FF3377;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 20px;
+  transition: transform 0.3s, background-color 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #FF61A6;
+  transform: scale(1.1);
+}
+
+/* Flirt message styling */
+#flirt-message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #FF3377;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Heart floating effect */
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 3px solid #FF61A6;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+  animation: floatHearts 10s linear infinite;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 3px solid #FF61A6;
+  border-radius: 50%;
+}
+
+.heart::before {
+  left: 50%;
+  top: -15px;
+}
+
+.heart::after {
+  top: 50%;
+  left: -15px;
+}
+
+/* Keyframe for floating heart animation */
+@keyframes floatHearts {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(-45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(200px, -100vh) rotate(-45deg);
+  }
+}
+
+/* Keyframe for rotating puppy image */
+@keyframes rotatePuppy {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
